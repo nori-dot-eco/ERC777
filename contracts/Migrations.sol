@@ -10,7 +10,7 @@ pragma solidity 0.4.24;
 
 contract Migrations {
     address public owner;
-    uint public last_completed_migration; // solhint-disable-line var-name-mixedcase
+    uint public last_completed_migration;
 
     modifier restricted() {
         if (msg.sender == owner) _;
@@ -24,7 +24,7 @@ contract Migrations {
         last_completed_migration = completed;
     }
 
-    function upgrade(address new_address) public restricted { // solhint-disable-line func-param-name-mixedcase
+    function upgrade(address new_address) public restricted {
         Migrations upgraded = Migrations(new_address);
         upgraded.setCompleted(last_completed_migration);
     }

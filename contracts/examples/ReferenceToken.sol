@@ -31,7 +31,9 @@ contract ReferenceToken is ERC777ERC20BaseToken, Ownable {
         address _burnOperator
     )
         public ERC777ERC20BaseToken(_name, _symbol, _granularity, _defaultOperators)
-    { mBurnOperator = _burnOperator; }
+    {
+        mBurnOperator = _burnOperator;
+    }
 
     /// @notice Disables the ERC20 interface. This function can only be called
     ///  by the owner.

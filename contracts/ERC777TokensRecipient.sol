@@ -5,7 +5,7 @@
  * This code has not been reviewed.
  * Do not use or deploy this code before reviewing it personally first.
  */
-// solhint-disable-next-line compiler-fixed
+//
 pragma solidity ^0.4.24;
 
 
@@ -14,7 +14,7 @@ interface ERC777TokensRecipient {
         address operator,
         address from,
         address to,
-        uint amount,
+        uint256 amount,
         bytes holderData,
         bytes operatorData
     ) public;

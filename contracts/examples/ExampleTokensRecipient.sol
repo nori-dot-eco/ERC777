@@ -25,13 +25,13 @@ contract ExampleTokensRecipient is ERC820Implementer, ERC820ImplementerInterface
     }
 
     function tokensReceived(
-        address operator,  // solhint-disable no-unused-vars
-        address from,
-        address to,
-        uint amount,
-        bytes holderData,
-        bytes operatorData
-    )  // solhint-enable no-unused-vars
+        address _operator,
+        address _from,
+        address _to,
+        uint256 _amount,
+        bytes _holderData,
+        bytes _operatorData
+    )
         public
     {
         require(allowTokensReceived, "Receive not allowed");
@@ -42,7 +42,6 @@ contract ExampleTokensRecipient is ERC820Implementer, ERC820ImplementerInterface
 
     function rejectTokens() public onlyOwner { allowTokensReceived = false; }
 
-    // solhint-disable-next-line no-unused-vars
     function canImplementInterfaceForAddress(address addr, bytes32 interfaceHash) public view returns(bytes32) {
         return ERC820_ACCEPT_MAGIC;
     }

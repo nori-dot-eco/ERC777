@@ -25,13 +25,13 @@ contract ExampleTokensSender is ERC820Implementer, ERC820ImplementerInterface, E
     }
 
     function tokensToSend(
-        address operator,   // solhint-disable no-unused-vars
+        address operator,
         address from,
         address to,
         uint amount,
         bytes holderData,
         bytes operatorData
-    )  // solhint-enable no-unused-vars
+    )
         public
     {
         require(allowTokensToSend, "Send not allowed");
@@ -42,7 +42,6 @@ contract ExampleTokensSender is ERC820Implementer, ERC820ImplementerInterface, E
 
     function rejectTokensToSend() public onlyOwner { allowTokensToSend = false; }
 
-    // solhint-disable-next-line no-unused-vars
     function canImplementInterfaceForAddress(address addr, bytes32 interfaceHash) public view returns(bytes32) {
         return ERC820_ACCEPT_MAGIC;
     }
