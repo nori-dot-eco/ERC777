@@ -15,7 +15,7 @@ interface ERC777TokensRecipient {
         address from,
         address to,
         uint256 amount,
-        bytes holderData,
+        bytes data,
         bytes operatorData
     ) public;
 }
