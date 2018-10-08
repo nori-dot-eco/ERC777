@@ -9,7 +9,7 @@ import { ERC777BaseToken } from "./ERC777BaseToken.sol";
 
 
 contract ERC777ERC20BaseToken is ERC20Token, ERC777BaseToken {
-        bool internal mErc20compatible;
+    bool internal mErc20compatible;
 
     mapping(address => mapping(address => bool)) internal mAuthorized;
     mapping(address => mapping(address => uint256)) internal mAllowed;
