@@ -2,9 +2,9 @@
   "extends": "solium:all",
   "plugins": ["security"],
   "rules": {
-    "quotes":           ["error", "double"],
-    "indentation":      ["error", 4],
-    "max-len":          ["error", 120],
+    "quotes": ["error", "double"],
+    "indentation": ["error", 4],
+    "max-len": ["error", 120],
     "array-declarations": "error",
     "blank-lines": "error",
     "camelcase": "error",
