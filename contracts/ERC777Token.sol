@@ -22,6 +22,8 @@ interface ERC777Token {
 
     function send(address to, uint256 amount, bytes data) public;
     function operatorSend(address from, address to, uint256 amount, bytes data, bytes operatorData) public;
+    function transferFromAndCall(address _from, address _to, uint256 _amount, bytes _data, bytes _operatorData)
+        public returns (bool success);
 
     function burn(uint256 amount, bytes data) public;
     function operatorBurn(address from, uint256 amount, bytes data, bytes operatorData) public;
