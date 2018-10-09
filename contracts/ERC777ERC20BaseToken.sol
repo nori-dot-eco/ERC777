@@ -135,7 +135,6 @@ contract ERC777ERC20BaseToken is ERC20Token, ERC777BaseToken {
         if (mErc20compatible) { emit Transfer(_from, _to, _amount); }
     }
 
-    //todo is this the same thing ass callspender?
     /// @notice Helper function that checks for IEIP777TokensOperator on the recipient and calls it.
     ///  May throw according to `_preventLocking`
     /// @param _from The address holding the tokens being sent
